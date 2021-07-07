@@ -31,28 +31,69 @@
     border-radius: 50%;
 }
 
-/* -------- */
+/* --- ex4 vanish --- */
 .ex-4-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: opacity 0.4s;
 }
-/* -------- */
+.ex-4-square:hover{
+    opacity: 0;
+}
+
+/* --- ex5  --- */
 .ex-5-square {
     margin: 20px;
     width: 60px;
     height: 60px;
     background: red;
+    transition: all 0.3s;
 }
-/* -------- */
-.ex-6-img, .ex-7-img, .ex-8-img {
-    width: 500px;
+.ex-5-square:hover{
+    transform: scale(2);
+}
+.ex-5-square:active{
+    transform: scale(0.5);
 }
 
+/* ------ */
+.ex-6-img, .ex-7-img, .ex-8-img {
+    width: 500px;
+    transition: filter 0.5s;
+}
+
+/* --- ex6 Black&White --- */
+.ex-6-img:hover{
+    filter: grayscale(1);
+}
+
+/* --- ex7 Double Filter --- */
+.ex-7-img:hover{
+    filter: grayscale(1) invert(100%);
+}
+
+/* --- ex8 DoubleFX + radius */
+.ex-8-img{
+    transition: all 1.5s;
+}
+.ex-8-img:hover{
+    filter: grayscale(1) invert(100%);
+    border-radius: 30px;
+}
+
+/* --- ex9 DoubleFX + Radius + scale */
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: transform 0.5s, filter 0.5s;
 }
+.ex-9-img:hover{
+    filter: drop-shadow(0px 0px 5px black) hue-rotate(40deg);
+    transform: scale(1.6);
+}
+
+
 .ex-10-icon {
     font-size: 60px;
 }
